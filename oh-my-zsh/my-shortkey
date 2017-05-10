@@ -1,0 +1,3 @@
+alias gam='git add . && git commit -m'
+alias gst='git status'
+alias gd='git diff'
