@@ -1,0 +1,16 @@
+AutoSave	auto-save.txt	/*AutoSave*
+auto-save	auto-save.txt	/*auto-save*
+auto-save-contents	auto-save.txt	/*auto-save-contents*
+auto-save-contribution_or_bug_report	auto-save.txt	/*auto-save-contribution_or_bug_report*
+auto-save-description	auto-save.txt	/*auto-save-description*
+auto-save-development	auto-save.txt	/*auto-save-development*
+auto-save-enable_on_startup	auto-save.txt	/*auto-save-enable_on_startup*
+auto-save-events	auto-save.txt	/*auto-save-events*
+auto-save-installation	auto-save.txt	/*auto-save-installation*
+auto-save-license	auto-save.txt	/*auto-save-license*
+auto-save-options	auto-save.txt	/*auto-save-options*
+auto-save-postsave_hook	auto-save.txt	/*auto-save-postsave_hook*
+auto-save-silent	auto-save.txt	/*auto-save-silent*
+auto-save-usage	auto-save.txt	/*auto-save-usage*
+auto-save-write_to_all_buffers	auto-save.txt	/*auto-save-write_to_all_buffers*
+vim-auto-save	auto-save.txt	/*vim-auto-save*
