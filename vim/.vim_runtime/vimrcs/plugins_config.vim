@@ -16,11 +16,11 @@ call pathogen#helptags()
 """"""""""""""""""""""""""""""
 " => bufExplorer plugin
 """"""""""""""""""""""""""""""
-let g:bufExplorerDefaultHelp=0
-let g:bufExplorerShowRelativePath=1
-let g:bufExplorerFindActive=1
-let g:bufExplorerSortBy='name'
-map <leader>o :BufExplorer<cr>
+" let g:bufExplorerDefaultHelp=0
+" let g:bufExplorerShowRelativePath=1
+" let g:bufExplorerFindActive=1
+" let g:bufExplorerSortBy='name'
+" map <leader>o :BufExplorer<cr>
 
 
 """"""""""""""""""""""""""""""
@@ -45,7 +45,6 @@ let g:ctrlp_working_path_mode = 0
 let g:ctrlp_map = '<c-f>'
 map <leader>j :CtrlP<cr>
 map <c-b> :CtrlPBuffer<cr>
-
 let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 
@@ -60,8 +59,8 @@ let g:user_zen_mode='a'
 """"""""""""""""""""""""""""""
 " => snipMate (beside <TAB> support <CTRL-j>)
 """"""""""""""""""""""""""""""
-ino <c-j> <c-r>=snipMate#TriggerSnippet()<cr>
-snor <c-j> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
+" ino <c-j> <c-r>=snipMate#TriggerSnippet()<cr>
+" snor <c-j> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
 
 
 """"""""""""""""""""""""""""""
@@ -93,8 +92,8 @@ let g:multi_cursor_next_key="\<C-s>"
 " => surround.vim config
 " Annotate strings with gettext http://amix.dk/blog/post/19678
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-vmap Si S(i_<esc>f)
-au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
+" vmap Si S(i_<esc>f)
+" au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -128,10 +127,10 @@ let g:lightline = {
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vimroom
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:goyo_width=100
-let g:goyo_margin_top = 2
-let g:goyo_margin_bottom = 2
-nnoremap <silent> <leader>z :Goyo<cr>
+" let g:goyo_width=100
+" let g:goyo_margin_top = 2
+" let g:goyo_margin_bottom = 2
+" nnoremap <silent> <leader>z :Goyo<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -225,31 +224,60 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 set completeopt-=preview
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => NERDCommentor 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" => NERDCommentor 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
-"
-" Use compact syntax for prettified multi-line comments
-let g:NERDCompactSexyComs = 1
-" Align line-wise comment delimiters flush left instead of following code indentation
-let g:NERDDefaultAlign = 'left'
-" Set a language to use its alternate delimiters by default
-let g:NERDAltDelims_java = 1
+"" Add spaces after comment delimiters by default
+"let g:NERDSpaceDelims = 0
+""
+"" Use compact syntax for prettified multi-line comments
+"let g:NERDCompactSexyComs = 1
+"" Align line-wise comment delimiters flush left instead of following code indentation
+"let g:NERDDefaultAlign = 'left'
+"" Set a language to use its alternate delimiters by default
+"let g:NERDAltDelims_java = 1
 
-" Add your own custom formats or override the defaults
-let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
-" Allow commenting and inverting empty lines (useful when commenting a region)
-let g:NERDCommentEmptyLines = 1
-" Enable trimming of trailing whitespace when uncommenting
-let g:NERDTrimTrailingWhitespace = 1
+"" Add your own custom formats or override the defaults
+"let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+"" Allow commenting and inverting empty lines (useful when commenting a region)
+"let g:NERDCommentEmptyLines = 1
+"" Enable trimming of trailing whitespace when uncommenting
+"let g:NERDTrimTrailingWhitespace = 1
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => AutoSave
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:auto_save = 1  " enable AutoSave on Vim startup
-let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
-let g:auto_save_silent = 1  " do not display auto-save notification
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" => AutoSave
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:auto_save = 1  " enable AutoSave on Vim startup
+"let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
+"let g:auto_save_silent = 1  " do not display auto-save notification
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" => Syntastic 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"" let g:syntastic_python_checkers=['flake8']
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" => DelimitMate 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let delimitMate_expand_cr = 1
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" => Flake8
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" let g:flake8_quickfix_height=7
+"" let g:flake8_quickfix_location="top"
+"" let g:flake8_show_quickfix=0
+
+
 

@@ -345,8 +345,7 @@ map <leader>x :e ~/buffer.md<cr>
 map <leader>pp :setlocal paste!<cr>
 
 " Remove highligh after search
-nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
-
+map <silent> <esc> :noh<cr><esc>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
