@@ -27,9 +27,10 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'git@github.com:Raimondi/delimitMate.git'
-Plugin 'nvie/vim-flake8'
+"Plugin 'nvie/vim-flake8'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'vim-syntastic/syntastic'
 
 
 " All of your Plugins must be added before the following line
@@ -38,10 +39,19 @@ filetype plugin indent on    " required
 
 
 " Nerd Commenter
-let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
 
 " Vim Flake8
-let g:flake8_show_quickfix=1
-let g:flake8_show_in_gutter=1
+"let g:flake8_show_quickfix=1
+"let g:flake8_show_in_gutter=1
+"let g:flake8_show_in_file=1
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers=['flake8']
 
