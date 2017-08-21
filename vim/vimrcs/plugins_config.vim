@@ -26,14 +26,22 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'git@github.com:Valloric/YouCompleteMe.git'
 Plugin 'git@github.com:Raimondi/delimitMate.git'
+Plugin 'nvie/vim-flake8'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'Shougo/neocomplete.vim'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 
+" Nerd Commenter
 let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
+
+" Vim Flake8
+let g:flake8_show_quickfix=1
+let g:flake8_show_in_gutter=1
 
