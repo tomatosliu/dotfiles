@@ -31,6 +31,7 @@ Plugin 'git@github.com:Raimondi/delimitMate.git'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'git@github.com:tell-k/vim-autopep8.git'
 
 
 " All of your Plugins must be added before the following line
