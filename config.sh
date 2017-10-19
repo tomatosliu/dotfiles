@@ -24,3 +24,6 @@ echo "====================="
 echo "3. Config Vim"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim || true
 vim +PluginInstall +qall
+git config --global diff.tool vimdiff
+git config --global difftool.prompt false
+git config --global alias.d difftool
