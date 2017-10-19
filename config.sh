@@ -3,6 +3,7 @@
 set -e
 
 # Require Vim with Lua
+mv ~/.zshrc ~/.zshrc.backup
 
 sudo pip install flake8
 sudo mkdir -p ~/.vim_runtime
