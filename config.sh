@@ -2,8 +2,12 @@
 
 set -e
 
-# Require Vim with Lua
+echo "====================="
+echo "1. Backup your config files. e.g. ~/.zshrc -> ~/.zshrc.backup"
 mv ~/.zshrc ~/.zshrc.backup
+
+echo "====================="
+echo "2. Install"
 
 sudo pip install flake8
 sudo mkdir -p ~/.vim_runtime
@@ -15,5 +19,8 @@ cp -R oh-my-zsh/* ~/.oh-my-zsh/
 chsh -s /bin/zsh
 cp oh-my-zsh/.zshrc ~/
 cp flake8 ~/.config/flake8
+
+echo "====================="
+echo "3. Config Vim"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim || true
 vim +PluginInstall +qall
