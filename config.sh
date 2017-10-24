@@ -13,8 +13,8 @@ sudo pip install flake8
 sudo mkdir -p ~/.vim_runtime
 sudo mkdir -p ~/.oh-my-zsh
 sudo mkdir -p ~/.config
-# cp -R vim/* ~/.vim_runtime/
-rsync -av --progress vim ~/.vim_runtime
+cp -R vim/* ~/.vim_runtime/
+# rsync -av --progress vim ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 cp -R oh-my-zsh/* ~/.oh-my-zsh/
 chsh -s /bin/zsh
