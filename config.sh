@@ -2,9 +2,20 @@
 
 set -e
 
+sudo apt-get install zsh
+chsh -s /bin/zsh
+
+
 echo "====================="
 echo "1. Backup your config files. e.g. ~/.zshrc -> ~/.zshrc.backup"
-mv ~/.zshrc ~/.zshrc.backup || true
+# Require Vim with Lua
+if [ -f "$HOME/.zshrc" ]
+then
+ echo "$file found."
+ mv ~/.zshrc ~/.zshrc.backup
+else
+ echo "$file not found."
+fi
 
 echo "====================="
 echo "2. Install"
