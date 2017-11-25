@@ -2,8 +2,18 @@
 
 set -e
 
+sudo apt-get install zsh
+chsh -s /bin/zsh
+
 # Require Vim with Lua
-mv ~/.zshrc ~/.zshrc.backup
+# file= $HOME/.zshrc
+if [ -f "$HOME/.zshrc" ]
+then
+ echo "$file found."
+ mv ~/.zshrc ~/.zshrc.backup
+else
+ echo "$file not found."
+fi
 
 sudo pip install flake8
 sudo mkdir -p ~/.vim_runtime
