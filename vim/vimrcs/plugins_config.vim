@@ -31,6 +31,7 @@ Plugin 'git@github.com:Raimondi/delimitMate.git'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'git@github.com:tell-k/vim-autopep8.git'
 
 
 " All of your Plugins must be added before the following line
@@ -55,7 +56,7 @@ set statusline+=%*
 
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_checkers=['pep8']
 
 " Neocomplate
 " Disable AutoComplPop.
