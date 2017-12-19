@@ -26,12 +26,13 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'git@github.com:Raimondi/delimitMate.git'
+Plugin 'Raimondi/delimitMate.git'
 "Plugin 'nvie/vim-flake8'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'git@github.com:tell-k/vim-autopep8.git'
+Plugin 'tell-k/vim-autopep8.git'
+Plugin 'heavenshell/vim-pydocstring'
 
 
 " All of your Plugins must be added before the following line
@@ -56,7 +57,7 @@ set statusline+=%*
 
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_python_checkers=['pep8']
+let g:syntastic_python_checkers=['flake8']
 
 " Neocomplate
 " Disable AutoComplPop.
@@ -77,3 +78,5 @@ let g:neocomplete#sources#dictionary#dictionaries = {
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>""
  
+" Pydocstring
+nmap <silent> <C-_> <Plug>(pydocstring)
