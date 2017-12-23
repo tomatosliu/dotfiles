@@ -35,6 +35,7 @@ cp flake8 ~/.config/flake8
 echo "====================="
 echo "3. Config Vim"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim || true
+pip install autopep8 --user
 vim +PluginInstall +qall
 git config --global diff.tool vimdiff
 git config --global difftool.prompt false
