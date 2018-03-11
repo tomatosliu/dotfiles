@@ -155,7 +155,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
-    colorscheme torte 
+    colorscheme tender 
 catch
 endtry
 
@@ -174,7 +174,6 @@ set encoding=utf8
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
