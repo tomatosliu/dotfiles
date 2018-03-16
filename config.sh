@@ -40,6 +40,7 @@ vim +PluginInstall +qall
 git config --global diff.tool vimdiff
 git config --global difftool.prompt false
 git config --global alias.d difftool
+(cd ~/.vim/bundle/YouCompleteMe && ./install.py)
 
 echo "====================="
 echo "4. Success!"
