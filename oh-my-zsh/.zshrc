@@ -52,7 +52,13 @@ ZSH_THEME="mh"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+
+if [[ "$ExportZshSyntaxHighlighting" == "true" ]] {
+	plugins=""
+} else {
+	plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+	export ExportZshSyntaxHighlighting="true"
+}
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH/my-shortkey
