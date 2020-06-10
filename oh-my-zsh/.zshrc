@@ -92,6 +92,3 @@ source $ZSH/my-shortkey
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Programming ENV
-source /root/octopus2/devel/setup.zsh
