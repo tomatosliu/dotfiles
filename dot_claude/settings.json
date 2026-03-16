@@ -1,0 +1,26 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "bash -c 'plugin_dir=\"$(find \"$HOME/.claude/plugins/cache/claude-hud/claude-hud\" -mindepth 1 -maxdepth 1 -type d 2>/dev/null | sort -t. -k1,1n -k2,2n -k3,3n | tail -1)\"; exec /opt/homebrew/bin/node \"$plugin_dir/dist/index.js\"'"
+  },
+  "enabledPlugins": {
+    "swift-lsp@claude-plugins-official": true,
+    "everything-claude-code@everything-claude-code": true,
+    "claude-hud@claude-hud": true
+  },
+  "extraKnownMarketplaces": {
+    "everything-claude-code": {
+      "source": {
+        "source": "github",
+        "repo": "affaan-m/everything-claude-code"
+      }
+    },
+    "claude-hud": {
+      "source": {
+        "source": "github",
+        "repo": "jarrodwatts/claude-hud"
+      }
+    }
+  },
+  "skipDangerousModePermissionPrompt": true
+}
