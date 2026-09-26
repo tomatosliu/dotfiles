@@ -6,7 +6,8 @@ My macOS development environment managed by [chezmoi](https://www.chezmoi.io/).
 
 | Category | Files | Description |
 |----------|-------|-------------|
-| Zsh | `~/.zshrc` | Powerlevel10k, aliases, PATH |
+| Zsh | `~/.zshrc` | Oh My Zsh, plugins, aliases (machine-specific PATH/proxy go in untracked `~/.zshrc.local`) |
+| Powerlevel10k | `~/.p10k.zsh` | Prompt theme config (regenerate with `p10k configure`) |
 | Claude Code | `~/.claude/` | Settings, rules, skills, plugins config |
 | Ghostty | `~/Library/Preferences/com.mitchellh.ghostty.plist` | Terminal emulator preferences |
 
